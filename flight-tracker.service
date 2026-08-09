@@ -1,0 +1,15 @@
+[Unit]
+Description=Flight Price Tracker (FastAPI + APScheduler)
+After=network.target
+
+[Service]
+Type=simple
+User=flighttracker
+WorkingDirectory=/opt/flight-tracker
+EnvironmentFile=/opt/flight-tracker/.env
+ExecStart=/opt/flight-tracker/venv/bin/uvicorn scheduler:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
