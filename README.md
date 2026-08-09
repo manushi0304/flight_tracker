@@ -5,12 +5,6 @@ from `TRACK_START_DATE` to `TRACK_END_DATE` once a day, sends an instant
 Telegram alert on a ≥₹1,000 price drop, and a Monday Telegram digest of the
 cheapest fare per route each week.
 
-**Notifications use Telegram, not WhatsApp.** Twilio's WhatsApp sandbox looked
-free but its trial account expires 30 days after signup, which doesn't work
-for a multi-month tracking window. Telegram's Bot API is free indefinitely,
-with no trial, no card, and no message limits — so that's what this project
-uses.
-
 This project supports **two deployment modes**:
 
 | Mode | Cost | Where jobs run |
